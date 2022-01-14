@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/app.js" defer></script>
+
+</head>
+<body>
+  <section class="main-section">
+    <div class="container">
+      <div class="heading-text">
+        <svg xmlns="http://www.w3.org/2000/svg" width="146" height="145">
+          <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
+            <circle cx="63" cy="82" r="62.5"/>
+            <circle cx="105" cy="41" r="40.5"/>
+          </g>
+        </svg>
+        <h1>Simple, traffic-based pricing</h1>
+        <h3>Sign-up for our 30-day trail. No credit card required</h3>
+      </div>
+
+      <div class="pricing-container">
+        <div class="pricing-pageviews">
+          <p><output id="rangevalue">20</output>K PAGEVIEWS</p>
+          <h1 class="price-value">$8<span>/month</span></h1>
+        </div>
+        <div class="slider-container">
+          <input type="range" min="20" max="100" step="20" name="slider" id="slider" class="slider" oninput="rangevalue.value=value">
+          
+        </div>
+        <div class="toggle-container">
+          <p>Monthly Billing</p>
+          <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="check round"></span>
+          </label>
+          <div class="year-bill">
+            <p>Yearly Billing <span class="discount">25% discount</span></p>
+          </div>
+        </div>
+
+        <div class="start-trail">
+          <div class="benefits-container">
+            <div class="benefits-item">
+              <img src="images/icon-check.svg" alt="checkmark" width="20">
+              <p>Unlimited websites</p>
+            </div>
+            <div class="benefits-item">
+              <img src="images/icon-check.svg" alt="checkmark" width="20">
+              <p>100% data ownership</p>
+            </div>
+            <div class="benefits-item">
+              <img src="images/icon-check.svg" alt="checkmark" width="20">
+              <p>Email Reports</p>
+            </div>
+          </div>
+          <p class="btn">Start my trial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
